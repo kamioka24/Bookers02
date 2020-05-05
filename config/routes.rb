@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/top'
-  get 'users/index'
-  get 'users/show'
-  get 'users/edit'
+  get 'home/about' #要確認
+  get '/' => 'users#top'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :books
+  resources :users
 end

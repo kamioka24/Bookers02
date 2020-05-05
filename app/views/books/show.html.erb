@@ -1,0 +1,17 @@
+<p><%= flash[:notice] %></p>
+
+<table width="800">
+	<h1>Book detail</h1>
+	<tr>
+		<th></th>
+		<th><%= @book.title %></th>
+		<th><%= @book.body %></th>
+		<% if @book.user == current_user %>
+			<th class="edit-btn"><%= link_to "Edit", edit_book_path(@book.id), class: "pull-right" %></th>
+		<% end %>
+
+		<% if @book.user == current_user %>
+			<th><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に削しますか？" %></th>
+		<% end %>
+	</tr>
+</table>
