@@ -25,11 +25,11 @@
               <%= link_to 'Books', books_path %>
             </li>
             <li class="header-list">
-              <%= link_to 'logout', destroy_user_session_path, method: :delete %> <!-- 要確認 -->
+              <%= link_to 'logout', destroy_user_session_path, method: :delete %>
             </li>
           <% else %>
             <li class="header-list">
-              <%= link_to "Home", "/" %> <!-- 要変更 -->
+              <%= link_to "Home", root_path %>
             </li>
             <li class="header-list">
               <%= link_to "About", home_about_path %>
